@@ -1,6 +1,6 @@
 # Programación Web 2026 - Mis códigos en clase.
 
-####### Este repositorio contiene los ejercicios y tareas que se irán desarrollando durante el semestre.
+###### Este repositorio contiene los ejercicios y tareas que se irán desarrollando durante el semestre.
 
 ## Descripción del estudiante
 - **Nombre** Daiana Elizabeth Medina Martinez
