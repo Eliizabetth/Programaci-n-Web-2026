@@ -20,7 +20,7 @@
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="reservas.html">Reservas</a></li>
-                <li><a href="registro.html" aria-current="page">Registro</a></li>
+                <li><a href="registro.html">Registro</a></li>
             </ul>
         </nav>
     </header>
@@ -30,30 +30,30 @@
             <h2>Crear cuenta en La Jalisco</h2>
             <p>Regístrate para recibir promociones exclusivas, reservar con mayor rapidez y participar en nuestro programa de lealtad nocturno.</p>
 
-            <form action="/api/registro" method="POST" novalidate>
+            <form action="/api/registro" method="POST">
                 
                 <fieldset>
                     <legend>Información personal</legend>
                     
                     <p>
-                        <label for="nombre-completo">Nombre completo <span aria-hidden="true">*</span></label>
-                        <input type="text" id="nombre-completo" name="nombre_completo" autocomplete="name" required aria-required="true" placeholder="Ej. Juan Pérez">
+                        <label for="nombre-completo">Nombre completo *</label>
+                        <input type="text" id="nombre-completo" name="nombre_completo" required placeholder="Ej. Juan Pérez">
                     </p>
 
                     <p>
-                        <label for="correo-electronico">Correo electrónico <span aria-hidden="true">*</span></label>
-                        <input type="email" id="correo-electronico" name="correo" autocomplete="email" required aria-required="true" placeholder="correo@ejemplo.com">
+                        <label for="correo-electronico">Correo electrónico *</label>
+                        <input type="email" id="correo-electronico" name="correo" required placeholder="correo@ejemplo.com">
                     </p>
 
                     <p>
-                        <label for="telefono-movil">Teléfono móvil (WhatsApp para confirmar reservas) <span aria-hidden="true">*</span></label>
-                        <input type="tel" id="telefono-movil" name="telefono" autocomplete="tel" required aria-required="true" placeholder="+52 55 1234 5678" aria-describedby="ayuda-tel">
+                        <label for="telefono-movil">Teléfono móvil (WhatsApp para confirmar reservas) *</label>
+                        <input type="tel" id="telefono-movil" name="telefono" required placeholder="+52 55 1234 5678" aria-describedby="ayuda-tel">
                         <span id="ayuda-tel" style="font-size: 0.85em; color: #555;">Incluye código de país si es fuera de México.</span>
                     </p>
 
                     <p>
-                        <label for="fecha-nacimiento">Fecha de nacimiento (Requerido para verificación de mayoría de edad por barra de bar) <span aria-hidden="true">*</span></label>
-                        <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" autocomplete="bday" required aria-required="true">
+                        <label for="fecha-nacimiento">Fecha de nacimiento (Requerido para verificación de mayoría de edad por barra de bar) *</label>
+                        <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" required>
                     </p>
                 </fieldset>
 
@@ -92,8 +92,8 @@
                 <fieldset>
                     <legend>Privacidad y Notificaciones</legend>
                     <p>
-                        <input type="checkbox" id="acepta-terminos" name="terminos" required aria-required="true">
-                        <label for="acepta-terminos">Acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener">aviso de privacidad y términos de uso</a> <span aria-hidden="true">*</span></label>
+                        <input type="checkbox" id="acepta-terminos" name="terminos" required>
+                        <label for="acepta-terminos">Acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener">aviso de privacidad y términos de uso</a> *</label>
                     </p>
                     <p>
                         <input type="checkbox" id="recibir-promo" name="promociones" checked>
