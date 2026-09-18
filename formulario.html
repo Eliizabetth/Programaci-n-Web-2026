@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de usuario para clientes de La Jalisco, local de comida y barra de bar.">
+    <meta name="author" content="Daiana Elizabeth Medina Martinez">
+    <meta name="keywords" content="HTML, registro, La Jalisco, desarrollo web, bar, restaurante">
+    <title>Registro - La Jalisco</title>
+</head>
+<body>
+
+    <header>
+        <h1>La Jalisco</h1>
+        <img src="../img/FONDO IMAGEN.png" alt="Fondo decorativo de La Jalisco" width="820" height="300">
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="../index.html">Casa</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="registro.html" aria-current="page">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Crear cuenta en La Jalisco</h2>
+            <p>Regístrate para recibir promociones exclusivas, reservar con mayor rapidez y participar en nuestro programa de lealtad nocturno.</p>
+
+            <form action="/api/registro" method="POST" novalidate>
+                
+                <fieldset>
+                    <legend>Información personal</legend>
+                    
+                    <p>
+                        <label for="nombre-completo">Nombre completo <span aria-hidden="true">*</span></label>
+                        <input type="text" id="nombre-completo" name="nombre_completo" autocomplete="name" required aria-required="true" placeholder="Ej. Juan Pérez">
+                    </p>
+
+                    <p>
+                        <label for="correo-electronico">Correo electrónico <span aria-hidden="true">*</span></label>
+                        <input type="email" id="correo-electronico" name="correo" autocomplete="email" required aria-required="true" placeholder="correo@ejemplo.com">
+                    </p>
+
+                    <p>
+                        <label for="telefono-movil">Teléfono móvil (WhatsApp para confirmar reservas) <span aria-hidden="true">*</span></label>
+                        <input type="tel" id="telefono-movil" name="telefono" autocomplete="tel" required aria-required="true" placeholder="+52 55 1234 5678" aria-describedby="ayuda-tel">
+                        <span id="ayuda-tel" style="font-size: 0.85em; color: #555;">Incluye código de país si es fuera de México.</span>
+                    </p>
+
+                    <p>
+                        <label for="fecha-nacimiento">Fecha de nacimiento (Requerido para verificación de mayoría de edad por barra de bar) <span aria-hidden="true">*</span></label>
+                        <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" autocomplete="bday" required aria-required="true">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias en La Jalisco</legend>
+
+                    <p>
+                        <label for="bebida-favorita">Bebida favorita de barra</label>
+                        <input list="lista-bebidas" id="bebida-favorita" name="bebida_favorita" placeholder="Escribe o selecciona...">
+                        <datalist id="lista-bebidas">
+                            <option value="Piña Colada">
+                            <option value="Margarita Clásica">
+                            <option value="Cerveza Artesanal">
+                            <option value="Gin Tonic">
+                            <option value="Mocktail sin alcohol">
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <label for="tipo-musica">Género musical preferido</label>
+                        <select id="tipo-musica" name="musica_preferida">
+                            <option value="">Selecciona una opción</option>
+                            <option value="rock">Rock / Clásicos nocturnos</option>
+                            <option value="jazz-blues">Jazz y Blues</option>
+                            <option value="electronica">Electronic / Chill Out</option>
+                            <option value="variado">Variado / DJ set</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="notas-adicionales">Alergias o requerimientos dietéticos especiales (Opcional)</label>
+                        <textarea id="notas-adicionales" name="notas" rows="3" placeholder="Ej. Alergia al cacahuate, opción vegetariana..."></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Privacidad y Notificaciones</legend>
+                    <p>
+                        <input type="checkbox" id="acepta-terminos" name="terminos" required aria-required="true">
+                        <label for="acepta-terminos">Acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener">aviso de privacidad y términos de uso</a> <span aria-hidden="true">*</span></label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="recibir-promo" name="promociones" checked>
+                        <label for="recibir-promo">Deseo recibir notificaciones de eventos nocturnos y promociones de la barra por correo.</label>
+                    </p>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Completar registro</button>
+                    <button type="reset">Limpiar formulario</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Categorías del Menú</h3>
+        <ul>
+            <li><a href="menu.html#entradas">Entradas</a></li>
+            <li><a href="menu.html#principales">Platos principales</a></li>
+            <li><a href="menu.html#postres">Postres</a></li>
+            <li><a href="menu.html#bebidas">Bebidas</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>2026 La Jalisco. Todos los derechos reservados. <strong>v1.0.0</strong></p>
+    </footer>
+
+</body>
+</html>
