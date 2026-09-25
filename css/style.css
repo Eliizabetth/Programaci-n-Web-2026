@@ -1,0 +1,86 @@
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --text-muted: #333333;
+    --color-primario: #B83119;
+    --color-acento: #D4AF37;
+    --tipografia-principal: 'MiFuentePersonalizada', Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('../fonts/MiFuente.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--tipografia-principal);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+}
+
+main {
+    padding: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--color-acento);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
