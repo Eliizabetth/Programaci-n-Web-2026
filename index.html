@@ -17,11 +17,10 @@
     <header class="header">
 
         <div class = "menu container">
-            <a href="#" class="logo"> logo </a>
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <img src="img/Index-logo.png" class="menu-icon" alt="icono de menú">
-            </label>
+            <a href="index.html">
+                <img src="img/Index-logo.png" class="logo" alt="Logo de La Jalisco">
+            </a>
+
             <nav class = "navbar">
                 
                     <a href="index.html">Casa</a>
@@ -44,40 +43,48 @@
             <a href="pages/reservas.html" class="btn-r">Reserva tu mesa</a>
         </section> 
     
-        <section>
+        <section class="destacados">
             <h2>Menú destacado</h2>
-            <aside>
-        <h3>Categorías del Menú</h3>
-        <ul>
-            <li>Entradas</li>
-            <li>Platos principales</li>
-            <li>Postres</li>
-            <li>Bebidas</li>
-        </ul>
-    </aside>
-           <article class="menu-item">
-                <img src="img/Frame 1.png" alt="Hamburguesa Barcinos" width="250">
-                <h3>Hamburguesa Barcinos</h3>
-                <p>Nuestra especialidad con queso, tocino y acompañadas de papas a la francesa.</p>
-                <p><strong>$210</strong></p>
-            </article>
+            
+            <div class="productos">
+        <article class="menu-item">
+            <img src="img/Frame 1.png" alt="Hamburguesa Barcinos">
+            <h3>Hamburguesa Barcinos</h3>
+            <p>Nuestra especialidad con queso, tocino y acompañadas de papas a la francesa.</p>
+            <p><strong>$210</strong></p>
+        </article>
 
-            <article class="menu-item">
-                <img src="img/Frame 2.png" alt="Alitas mango y fresa chipotle" width="250">
-                <h3>Alitas Mango y Fresa Chipotle</h3>
-                <p>Crujientes alitas bañadas en nuestra salsa especial de la casa.</p>
-                <p><strong>$140</strong></p>
-            </article>
+        <article class="menu-item">
+            <img src="img/Frame 2.png" alt="Alitas mango y fresa chipotle">
+            <h3>Alitas Mango y Fresa Chipotle</h3>
+            <p>Crujientes alitas bañadas en nuestra salsa especial de la casa.</p>
+            <p><strong>$140</strong></p>
+        </article>
 
-            <article class="menu-item">
-                <img src="img/Frame 4.png" alt="Piña Colada" width="250">
-                <h3>Piña Colada</h3>
-                <p>Bebida refrescante preparada al momento en nuestra barra.</p>
-                <p><strong>$135</strong></p>
-            </article>
+        <article class="menu-item">
+            <img src="img/Frame 4.png" alt="Piña Colada">
+            <h3>Piña Colada</h3>
+            <p>Bebida refrescante preparada al momento en nuestra barra.</p>
+            <p><strong>$135</strong></p>
+        </article>
+            </div>
+        </section>
 
+        <section class="catalogo">
+            <aside class="categorias">
+                <h3>Categorías del menú</h3>
+                <ul>
+                    <li>Entradas</li>
+                    <li>Platos principales</li>
+                    <li>Postres</li>
+                    <li>Bebidas</li>
+                </ul>
+            </aside>
+
+            <h2>Calificaciones de nuestros clientes</h2>
+            
             <table border ="1">
-                <caption > Calificaciones del grupo de clientes que visitaron nuestro local en el último mes.</caption>
+                <caption > Calificaciones de clientes que visitaron nuestro local en el último mes.</caption>
                 <thead>
                     <tr>
                         <th scope=" col">Calificación</th>
