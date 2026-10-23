@@ -1,10 +1,18 @@
 :root {
 --bg-color: #000000;
+--bg-card:#111111;
 --text-color: #FFFFFF;
 --text-muted: #333333;
 --color-primario: #B83119;
 --color-acento: #D4AF37;
+
+--espaciado: 16px;
+--radio-borde: 8px;
+--sombra-tarjeta: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+
 --tipografia-principal: Arial, sans-serif;
+--tam-titulo: 1.7rem
 }
 
 * {
@@ -14,130 +22,131 @@
   }
 
 body {
-display: grid;
-grid-template-areas: 
-"header header"
-"sidebar main"
-"footer footer";
-grid-template-columns: minmax(0, 1fr);
-grid-template-rows: auto 1fr auto;
-min-height: 100vh;
-font-family: var(--tipografia-principal);
-background-color: var(--bg-color);
-color: var(--text-color);
-font-size: 1rem;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+    font-family: var(--tipografia-principal);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
 }
 
 a {
-text-decoration: none;
-color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 img {
-max-width: 100%;
+    max-width: 100%;
+    height: auto;
+    display:block;
 }
 
 header {
-grid-area: header;
-background-color: var(--bg-color);
-color: var(--color-acento);
-padding: 18px;
+    grid-area: header;
+    background-color: var(--bg-color);
+    color: var(--color-acento);
+    padding: var(--espaciado);
+    border-bottom: 1px solid var(--color-acento);
 }
 
 .menu {
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaciado);
 }
 
 .logo {
-color: var(--color-acento);
-font-weight: bold;
-font-size: 1.2rem;
+    max-height: 50px;
 }
 
 .navbar {
-display: flex;
-justify-content: flex-end;
-align-items: center;
-flex-wrap: wrap;
-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--espaciado);
 }
 
 .navbar a {
-color: var(--text-color);
-padding: 10px;
-border: 1px solid var(--color-acento);
-border-radius: 5px;
+    color: var(--text-color);
+    padding: 10px;
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
 }
 
 .hero {
-position: relative;
-width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .hero img {
-width: 100%;
-height: auto;
-display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .fondo-content {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
 }
 
 .btn-r {
-position: absolute;
-bottom: 20px;
-left: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 
-background-color: var(--color-acento);
-color: var(--bg-color);
+    background-color: var(--color-acento);
+    color: var(--bg-color);
 
-padding: 10px 20px;
-margin: 5px;
+    padding: 10px 20px;
+    margin: 5px;
 
-border: 2px solid var(--color-acento);
-border-radius: 8px;
+    border: 2px solid var(--color-acento);
+    border-radius: 8px;
 
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 
 
 }
 
 main {
-grid-area: main;
-min-width: 0;
-padding: 40px;
+    grid-area: main;
+    min-width: 0;
+    padding: 40px;
 }
 
 h1 {
-font-size: 2rem;
-color: var(--color-acento);
+    font-size: 2rem;
+    color: var(--color-acento);
 }
 
 h2 {
-font-size: 1.5rem;
-margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 aside {
-background-color: #111111;
-padding: 20px;
-border: 2px solid var(--color-acento);
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    background-color: var(--bg-card);
+    padding: 20px;
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-tarjeta);
 
 }
 
 aside ul {
-padding-left: 20px;
+    padding-left: 20px;
 }
 
 
@@ -148,41 +157,45 @@ padding-left: 20px;
 }
 
 .menu-item {
-flex: 1 1 220px;
-min-width: 0;
-background-color: #111111;
-padding: 20px;
-border: 2px solid var(--color-acento);
-border-radius: 8px;
-text-align: center;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    flex: 1 1 220px;
+    min-width: 0;
+
+    background-color: var(--bg-card);
+    padding: 20px;
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: var(--sombra-tarjeta);
 }
 
 .menu-item img {
-width: 100%;
-max-width: 250px;
-margin-bottom: 10px;
-border-radius: 8px;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 10px;
+    border-radius: var(--radio-borde);
 }
 
 .menu-item h3 {
-color: var(--color-acento);
-margin-bottom: 10px;
+    color: var(--color-acento);
+    margin-bottom: 10px;
 }
 
 .menu-item p {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 table {
-margin: 20px;
-border: 1px solid var(--color-acento);
-border-collapse: collapse
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid var(--color-acento);
+    border-collapse: collapse
 }
 
 th,
 td {
-padding: 10px;
+    padding: 10px;
+    border: 1px solid var(--color-acento);
+    text-align: left;
 }
 
 .destacados {
@@ -194,23 +207,64 @@ padding: 10px;
 }
 
 .categorias {
-    background-color: #111111;
+    background-color: var(--bg-card);
     padding: 20px;
     border: 2px solid var(--color-acento);
-    border-radius: 8px;
+    border-radius: var(--radio-borde);
 }
 
 .categorias ul {
     padding-left: 20px;
 }
 
-.catalogo table {
-    margin-top: 20px;
-}
 
 footer {
     grid-area: footer;
     background-color: var(--bg-color);
     color: var(--text-color);
     padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    main{
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+   main {
+        padding: 40px;
+    }
+
+    .catalogo {
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        grid-template-areas: "sidebar calificaciones";
+        gap: var(--espaciado);
+        align-items: start;
+    }
+
+    .categorias {
+        grid-area: sidebar;
+    }
+
+    .contenido-calificaciones {
+        grid-area: calificaciones;
+        min-width: 0;
+    }
+
+    .contenido-calificaciones table {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
