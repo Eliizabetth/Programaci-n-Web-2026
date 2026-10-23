@@ -98,7 +98,15 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 80%;
+    width: 90%;
+}
+
+.fondo-content h1 {
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+}
+.fondo-content p {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    margin-bottom: 20px;
 }
 
 .btn-r {
@@ -266,5 +274,14 @@ footer {
     .contenido-calificaciones table {
         width: 100%;
         margin: 20px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .btn-r {
+        bottom: 8px;
+        left: 8px;
+        padding: 7px 12px;
+        font-size: 0.8rem;
     }
 }
