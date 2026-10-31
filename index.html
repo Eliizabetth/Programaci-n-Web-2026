@@ -8,20 +8,22 @@
     <meta name="keywords" content="HTML, CSS, proyecto, desarrollo web">
     <title>La Jalisco - Mi proyecto</title>
     <link rel="icon" href="img/logo-jalisco.png" type="image/x-icon">
-
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-
+    
     <header class="header">
-
         <div class = "menu container">
+            <button type="button" class="btn-menu" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">
+            ☰
+            </button>
+
             <a href="index.html">
                 <img src="img/Index-logo.png" class="logo" alt="Logo de La Jalisco">
             </a>
-
-            <nav class = "navbar">
+            
+            <nav class = "navbar" id="menu-navegacion">
                 
                     <a href="index.html">Casa</a>
                     <a href="pages/menu.html">Menú</a>
@@ -29,20 +31,23 @@
                     <a href="pages/contacto.html">Contacto</a>
                     <a href="pages/reservas.html">Reservas</a>
             </nav>
+             <button type="button" class="btn-tema" id="btn-tema">
+            ☀ Modo claro
+            </button>
         </div>
     </header>
-
     <main>
+        
         <section class="hero">
             <img src="img/FONDO IMAGEN.png" alt="fondo de La Jalisco">
 
             <div class="fondo-content container">
-                <h1>Bienvenido a La Jalisco</h1>                     
+                <h1>SABORES QUE NACEN CUANDO CAE LA NOCHE </h1>                     
                 <p>Disfruta de una experiencia culinaria única en nuestro local</p>                    
             </div>
             <a href="pages/reservas.html" class="btn-r">Reserva tu mesa</a>
         </section> 
-    
+        
         <section class="destacados">
             <h2>Menú destacado</h2>
             
@@ -58,25 +63,106 @@
             <img src="img/Frame 2.png" alt="Alitas mango y fresa chipotle">
             <h3>Alitas Mango y Fresa Chipotle</h3>
             <p>Crujientes alitas bañadas en nuestra salsa especial de la casa.</p>
-            <p><strong>$140</strong></p>
+            <p><strong>$145</strong></p>
         </article>
 
         <article class="menu-item">
             <img src="img/Frame 4.png" alt="Piña Colada">
             <h3>Piña Colada</h3>
             <p>Bebida refrescante preparada al momento en nuestra barra.</p>
-            <p><strong>$135</strong></p>
+            <p><strong>$145</strong></p>
+        </article>
+
+        <article class="menu-item">
+            <img src="img/Frame 3.png" alt="Boneless salseados">
+            <h3>Boneless Salseados</h3>
+            <p>Deliciosos boneless bañados en nuestra salsa especial.</p>
+            <p><strong>$150</strong></p>
         </article>
             </div>
         </section>
+        <div class="buscador">
+        
+            <input
+            type="search"
+            id="buscar-producto"
+            placeholder="Buscar en el menú...">
+         </div>
+        <div class="menu-categorias">
+            <nav class="categorias">
+                <h3>Categorías</h3>
 
+                <a href="#" class="activo" data-filtro="todos">Todos</a>
+                <a href="#" data-filtro="bebidas">Bebidas</a>
+                <a href="#" data-filtro="hamburguesas">Hamburguesas</a>
+                <a href="#" data-filtro="sushi">Sushi</a>
+                <a href="#" data-filtro="alitas">Alitas</a>
+                <a href="#" data-filtro="boneless">Boneless</a>
+                <a href="#" data-filtro="papas">Papas</a>
+                <a href="#" data-filtro="sabritas">Sabritas</a>
+            </nav>
+            
+        
+            <section class="destacados">            
+                <div class="productos">
+
+                <article class="menu-item" data-categoria="alitas">
+                    <img src="img/alitas.png" alt="Alitas mango y fresa chipotle">
+                    <h3>Alitas Mango y Fresa Chipotle</h3>
+                    <p>Crujientes alitas bañadas en nuestra salsa especial de la casa.</p>
+                    <p><strong>$145</strong></p>
+                </article>
+
+                <article class="menu-item" data-categoria="bebidas">
+                    <img src="img/pitufo.png" alt="Pitufo o azulito">
+                    <h3>Pitufo o azulito</h3>
+                    <p>Deliciosa bebida preparada con curacao</p>
+                    <p><strong>$150</strong></p>
+                </article>
+
+                <article class="menu-item" data-categoria="boneless">
+                    <img src="img/kiloBoneless.png" alt="Boneless salseados">
+                    <h3>Boneless Salseados</h3>
+                    <p>Deliciosos boneless bañados en nuestra salsa especial.</p>
+                    <p><strong>$150</strong></p>
+                </article>
+
+                <article class="menu-item" data-categoria="hamburguesas">
+                    <img src="img/hamburguesa.png" alt="Hamburguesa Barcinos">
+                    <h3>Hamburguesa Barcinos</h3>
+                    <p>Nuestra especialidad con queso, tocino y acompañadas de papas a la francesa.</p>
+                    <p><strong>$210</strong></p>
+                </article>
+
+                <article class="menu-item" data-categoria="todos">
+                    <img src="img/combo.png" alt="Combo de comida numero 1">
+                    <h3>Combo pareja #1</h3>
+                    <p>Deliciosa combinación de platillos principales, rollo, boneless, papas, dedos y aros</p>
+                    <p><strong>$350</strong></p>
+                </article>
+
+                <article class="menu-item" data-categoria="bebidas">
+                    <img src="img/pinada.png" alt="Piña Colada">
+                    <h3>Piña Colada</h3>
+                    <p>Bebida refrescante preparada al momento en nuestra barra.</p>
+                    <p><strong>$145</strong></p>
+                </article>
+
+                <article class="menu-item" data-categoria="bebidas">
+                    <img src="img/ballena.png" alt="Ballena">
+                    <h3>Ballena preparada</h3>
+                    <p>Cerveza preparada familiar</p>
+                    <p><strong>$120</strong></p>
+                </article>
+        </div>
+        </section>
+        </div>
         <section class="catalogo">
             <aside class="categorias">
                 <h3>Categorías del menú</h3>
                 <ul>
                     <li>Entradas</li>
-                    <li>Platos principales</li>
-                    <li>Postres</li>
+                    <li>Combos familiares</li>
                     <li>Bebidas</li>
                 </ul>
             </aside>
@@ -108,11 +194,12 @@
                 <p>En <strong>La Jalisco</strong>, nos enorgullece ofrecer una experiencia culinaria excepcional.</p>
             </article>
         </section>
+
     </main>
 
     <footer>
         <p>2026 La Jalisco. Todos los derechos reservados. <strong>v1.0.0</strong></p>
     </footer>
-
+<script src="js/interacciones.js" defer></script>
 </body>
 </html>

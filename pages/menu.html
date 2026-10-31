@@ -2,29 +2,85 @@
 <head>
     <meta charset ="UTF-8">
     <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menú de comida y bebidas de La Jalisco.">
+    <meta name="author" content="Daiana Elizabeth Medina Martinez">
     <title>Menú de La Jalisco</title>
-    <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/style-pages.css">
 
 </head>
 <body>
           <header>
             <div class = "menu container">
+            <button type="button" class="btn-menu" id="btn-menu">
+            ☰
+            </button>
                 <a href="../index.html">
                     <img src="../img/Index-logo.png" class="logo" alt="Logo de La Jalisco">
                 </a>
-        <h1>La Jalisco</h1>
-           <nav>
-            
-                <a href="../index.html">Casa</a>
-                <a href="menu.html">Menú</a>
-                <a href="eventos.html">Eventos</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="reservas.html">Reservas</a>
-        </nav>
+                <nav class="navbar">
+                    <a href="../index.html">Casa</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="eventos.html">Eventos</a>
+                    <a href="contacto.html">Contacto</a>
+            </nav>
+            <button type="button" class="btn-tema" id="btn-tema">
+            ☀ Modo claro
+            </button>
         </div>
-    <h1>
-        Menú de La Jalisco
-    </h1>
+            
+    </header>
 
+   <main class="container">
+        <h1>Nuestro menú</h1>
+        <p>Encuentra tu antojo. Explora nuestros platos y bebidas.</p>
+        
+        <div class="buscador">
+            <input
+                type="search"
+                id="buscar-producto"
+                placeholder="Buscar en el menú...">
+        </div>
+
+        <div class="filtros">
+            <button class="pill activo">Todos</button>
+            <button class="pill">Hamburguesas</button>
+            <button class="pill">Bebidas</button>
+            <button class="pill">Alitas</button>
+            <button class="pill">Boneless</button>
+        </div>
+
+        <section class="destacados">
+            <h2>Para comer</h2>
+            <div class="productos">
+                <article class="menu-item" data-categoria="hamburguesas">
+                    <img src="../img/Frame 1.png" alt="Hamburguesa Barcinos">
+                    <span>HAMBURGUESAS</span>
+                    <h3>Hamburguesa Barcinos</h3>
+                    <p>Doble carne de res premium, queso fundido, tocino crujiente y cebolla caramelizada.</p>
+                    <div class="card-footer">
+                        <strong>$210</strong>
+                        <button class="btn-add">+</button>
+                    </div>
+                </article>
+
+                <article class="menu-item" data-categoria="alitas">
+                    <img src="../img/Frame 2.png" alt="Alitas Mango y Fresa Chipotle">
+                    <span>ALITAS</span>
+                    <h3>Alitas Mango y Fresa Chipotle</h3>
+                    <p>Alitas crujientes bañadas en una exquisita y picante combinación de mango dulce y fresa.</p>
+                    <div class="card-footer">
+                        <strong>$140</strong>
+                        <button class="btn-add">+</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 La Jalisco. Todos los derechos reservados.</p>
+    </footer>
+<script src="../js/interacciones.js" defer></script>
 </body>    
 </html>

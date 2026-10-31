@@ -1,0 +1,548 @@
+:root {
+--bg-color: #000000;
+--bg-card:#111111;
+--text-color: #FFFFFF;
+--text-muted: #d2d2d2;
+--color-primario: #B83119;
+--color-acento: #D4AF37;
+--espaciado: 16px;
+--radio-borde: 8px;
+--sombra-tarjeta: 0 2px 6px rgba(198, 191, 191, 0.5);
+--tipografia-principal: Playfair Display, sans-serif;
+--tam-titulo: 1rem;
+--ancho-contenido: 1600px;
+}
+.container {
+    width: calc(100% - 40px);
+    max-width: var(--ancho-contenido);
+    margin-inline: auto;
+}
+
+header .menu {
+    width: 100%;
+    max-width: var(--ancho-contenido);
+    margin-inline: auto;
+}
+
+header nav,
+header .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header nav a {
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: var(--radio-borde);
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--bg-card);
+    color: var(--color-acento);
+}
+
+main > h1,
+.encabezado-reservas h1,
+.hero-eventos h1 {
+    color: var(--color-acento);
+    margin-bottom: 15px;
+}
+
+main > p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.destacados,
+.encabezado-reservas,
+.hero-eventos {
+    margin-bottom: 35px;
+}
+
+.encabezado-reservas {
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.encabezado-reservas span,
+.menu-item span {
+    color: var(--color-acento);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.encabezado-reservas h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.encabezado-reservas p {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(250px, 1fr);
+    gap: 25px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.form-contacto,
+.info-contacto,
+.paso-reserva,
+.card-resumen {
+    background-color: var(--bg-card);
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    padding: 25px;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.paso-reserva {
+    margin-bottom: 20px;
+}
+
+.paso-reserva h2 {
+    color: var(--color-acento);
+    font-size: 1.3rem;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.form-contacto label {
+    display: block;
+    color: var(--text-color);
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.form-contacto input,
+.form-contacto select,
+.form-contacto textarea {
+    width: 100%;
+    background-color: #080808;
+    color: var(--text-color);
+    border: 1px solid #444444;
+    border-radius: var(--radio-borde);
+    padding: 12px;
+    font-family: inherit;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    outline: 1px solid var(--color-acento);
+}
+
+.form-contacto textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.reserva-fechas-hora {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.reserva-fechas-hora > div {
+    min-width: 0;
+}
+
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.pill {
+    background-color: #080808;
+    color: var(--text-color);
+    border: 1px solid #444444;
+    padding: 9px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.pill:hover,
+.pill.activo {
+    background-color: var(--color-acento);
+    color: var(--bg-color);
+    border-color: var(--color-acento);
+}
+
+.card-resumen {
+    position: sticky;
+    top: 20px;
+}
+
+.card-resumen img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radio-borde);
+    margin-bottom: 20px;
+}
+
+.card-resumen h3 {
+    color: var(--color-acento);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.detalles-solicitud {
+    background-color: #080808;
+    border: 1px solid #333333;
+    border-radius: var(--radio-borde);
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.detalles-solicitud h4 {
+    color: var(--color-acento);
+    margin-bottom: 12px;
+}
+
+.detalles-solicitud p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.estado-envio {
+    color: var(--color-acento);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-resumen > p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+
+.form-contacto .btn-r,
+.card-resumen .btn-r,
+.menu-item .btn-r {
+    position: static;
+    display: inline-block;
+    width: auto;
+    transform: none;
+    margin: 15px 0 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.buscador {
+    margin: 25px 0;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    font-family: inherit;
+}
+
+main.container > .filtros {
+    margin-bottom: 35px;
+}
+
+main.container > .destacados {
+    margin-bottom: 40px;
+}
+
+main.container > .destacados h2 {
+    color: var(--color-acento);
+}
+
+main.container .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+main.container .menu-item {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--bg-card);
+    padding: 18px;
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    text-align: left;
+}
+
+main.container .menu-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: var(--radio-borde);
+    margin-bottom: 15px;
+}
+
+main.container .menu-item h3 {
+    color: var(--color-acento);
+    margin: 8px 0;
+}
+
+main.container .menu-item p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+main.container .card-footer {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+
+.hero-eventos {
+    background-color: var(--bg-card);
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    padding: 55px 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hero-eventos h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-eventos p {
+    line-height: 1.6;
+}
+
+main.container .destacados > h2 {
+    color: var(--color-acento);
+}
+
+main.container .destacados .menu-item {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+
+main.container .destacados .menu-item p {
+    margin-bottom: 15px;
+}
+
+
+.info-contacto {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.info-contacto h3 {
+    color: var(--color-acento);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.info-contacto p {
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.form-contacto h2 {
+    color: var(--color-acento);
+}
+
+
+footer {
+    border-top: 1px solid var(--color-acento);
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    line-height: 1.6;
+}
+
+
+@media (max-width: 767px) {
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reserva-fechas-hora {
+        grid-template-columns: 1fr;
+    }
+
+    .card-resumen {
+        position: static;
+    }
+
+    .encabezado-reservas {
+        padding-top: 25px;
+    }
+
+    .form-contacto,
+    .info-contacto,
+    .paso-reserva,
+    .card-resumen {
+        padding: 18px;
+    }
+
+    main.container .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main.container .menu-item {
+        padding: 12px;
+    }
+
+    main.container .menu-item img {
+        height: 140px;
+    }
+
+    header .menu {
+        flex-direction: column;
+    }
+
+    header nav {
+        gap: 4px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    main.container .productos {
+        grid-template-columns: 1fr;
+    }
+
+    main.container .menu-item img {
+        height: 200px;
+    }
+
+    .filtros {
+        gap: 7px;
+    }
+
+    .pill {
+        padding: 8px 12px;
+    }
+
+    .hero-eventos {
+        padding: 35px 15px;
+    }
+
+}
+
+body.tema-claro {
+    --bg-color: #F5F0E6;
+    --bg-card: #FFFFFF;
+    --text-color: #222222;
+    --text-muted: #555555;
+    --color-acento: #9A7410;
+    --sombra-tarjeta: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.tema-claro header,
+body.tema-claro footer,
+body.tema-claro main {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.tema-claro p,
+body.tema-claro label,
+body.tema-claro li {
+    color: var(--text-color);
+}
+
+body.tema-claro .menu-item,
+body.tema-claro .form-contacto,
+body.tema-claro .info-contacto,
+body.tema-claro .card-resumen,
+body.tema-claro .paso-reserva,
+body.tema-claro .hero-eventos {
+    background-color: var(--bg-card);
+    color: var(--text-color);
+}
+
+body.tema-claro .form-contacto input,
+body.tema-claro .form-contacto textarea,
+body.tema-claro .buscador input {
+    background-color: #FFFFFF;
+    color: #222222;
+}
+
+.btn-menu {
+    display: none;
+    background-color: transparent;
+    color: var(--color-acento);
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    padding: 8px 14px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.btn-tema {
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    padding: 10px 14px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.menu-item[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+
+    .btn-menu {
+        display: block;
+    }
+
+    header .menu {
+        align-items: center;
+    }
+
+    header .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar.abierto {
+        display: flex;
+    }
+
+    header .navbar a {
+        width: 100%;
+        text-align: center;
+    }
+
+}

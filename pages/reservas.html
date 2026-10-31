@@ -2,26 +2,128 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Reserva tu mesa en La Jalisco.">
+        <meta name="author" content="Daiana Elizabeth Medina Martinez">
+        
         <title>Reservas de La Jalisco</title>
-
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" href="../img/logo-jalisco.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/style-pages.css">
 
     </head>
     <body>
-          <header>
-        <h1>La Jalisco</h1>
-        <nav>
-            
-                <a href="index.html">Casa</a>
+    <header>
+
+        <div class="menu container">
+        <button type="button" class="btn-menu" id="btn-menu">
+        ☰
+        </button>
+            <a href="../index.html">
+                <img src="../img/Index-logo.png" class="logo" alt="Logo de La Jalisco">
+            </a>
+            <nav class="navbar">
+                <a href="../index.html">Casa</a>
                 <a href="menu.html">Menú</a>
                 <a href="eventos.html">Eventos</a>
                 <a href="contacto.html">Contacto</a>
                 <a href="reservas.html">Reservas</a>
-        </nav>
+            </nav>
+            <button type="button" class="btn-tema" id="btn-tema">
+            ☀ Modo claro
+            </button> 
+        </div>   
+            
     </header>
+    <main class="container">
+        <section class="encabezado-reservas">
+            <span>TU PRÓXIMA NOCHE EN LA JALISCO</span>
+            <h1>Una mesa para compartir.</h1>
+            <p>Elige con quién, cuándo y a qué hora. Cuéntanos los detalles y envía tu solicitud de reserva.</p>
+        </section>
 
-        <h1>
-            Reservas de La Jalisco
-        </h1>
+        <section class="contacto-grid">
+            <form class="form-contacto">
+                
+                <!-- Paso 1: Tu mesa -->
+                <div class="paso-reserva">
+                    <h2>01 Tu mesa</h2>
+                    
+                    <label>¿Cuántas personas vienen?</label>
+                    <div class="filtros">
+                        <button type="button" class="pill">1</button>
+                        <button type="button" class="pill activo">2 ✓</button>
+                        <button type="button" class="pill">3</button>
+                        <button type="button" class="pill">4</button>
+                        <button type="button" class="pill">5</button>
+                        <button type="button" class="pill">6</button>
+                        <button type="button" class="pill">7+</button>
+                    </div>
+
+                    <div class="reserva-fechas-hora">
+                        <div>
+                            <label for="fecha">Fecha de tu visita</label>
+                            <input type="date" id="fecha" value="2026-11-14" required>
+                        </div>
+
+                        <div>
+                            <label>Hora preferida</label>
+                            <div class="filtros">
+                                <button type="button" class="pill">19:00</button>
+                                <button type="button" class="pill">19:30</button>
+                                <button type="button" class="pill activo">20:00 ✓</button>
+                                <button type="button" class="pill">20:30</button>
+                                <button type="button" class="pill">21:00</button>
+                                <button type="button" class="pill">21:30</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paso-reserva">
+                    <h2>02 Tus datos</h2>
+
+                    <label for="nombre-completo">Nombre completo (obligatorio)</label>
+                    <input type="text" id="nombre-completo" placeholder="Escribe tu nombre" required>
+
+                    <div class="reserva-fechas-hora">
+                        <div>
+                            <label for="correo-reserva">Correo electrónico (obligatorio)</label>
+                            <input type="email" id="correo-reserva" placeholder="tu@correo.com" required>
+                        </div>
+                        <div>
+                            <label for="telefono-reserva">Teléfono (obligatorio)</label>
+                            <input type="tel" id="telefono-reserva" placeholder="Incluye tu código de país" required>
+                        </div>
+                    </div>
+
+                    <label for="solicitudes">Solicitudes especiales (opcional)</label>
+                    <textarea id="solicitudes" placeholder="¿Celebras algo? Cuéntanos si tienes alguna preferencia o necesidad alimentaria."></textarea>
+                </div>
+
+            </form>
+
+            <aside class="info-contacto card-resumen">
+                <img src="../img/Frame 1.png" alt="Comida La Jalisco">
+                <h3>La noche sabe mejor en buena compañía.</h3>
+                
+                <div class="detalles-solicitud">
+                    <h4>Tu solicitud de reserva</h4>
+                    <p><strong>Personas:</strong> 2 personas</p>
+                    <p><strong>Fecha elegida:</strong> Sábado, 14 de noviembre de 2026</p>
+                    <p><strong>Hora preferida:</strong> 20:00 h</p>
+                </div>
+
+                <p class="estado-envio">Pendiente de enviar</p>
+                <p>Enviar esta solicitud no confirma tu reserva. Nuestro equipo deberá confirmar la disponibilidad.</p>
+
+                <button type="submit" class="btn-r">Solicitar reserva →</button>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 La Jalisco. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/interacciones.js" defer></script>
 </body>
 </html>

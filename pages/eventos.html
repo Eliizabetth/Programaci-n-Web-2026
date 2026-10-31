@@ -2,30 +2,64 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Eventos y noches temáticas en La Jalisco.">
         <title>Eventos de La Jalisco</title>
-            <link rel="stylesheet" href="../css/styles.css">
+        <link rel="icon" href="../img/logo-jalisco.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/style-pages.css">
 
     </head>
     <body>
-          <header>
-            <div class = "menu container">
-                <a href="../index.html">
-                    <img src="../img/Index-logo.png" class="logo" alt="Logo de La Jalisco">
-                </a>
-        <h1>La Jalisco</h1>
-           <nav>
-            
+    <header>
+    
+        <div class = "menu container">
+        <button type="button" class="btn-menu" id="btn-menu">
+            ☰
+        </button>
+            <a href="../index.html">
+                <img src="../img/Index-logo.png" class="logo" alt="Logo de La Jalisco">
+            </a>
+            <nav class="navbar">
                 <a href="../index.html">Casa</a>
                 <a href="menu.html">Menú</a>
                 <a href="eventos.html">Eventos</a>
                 <a href="contacto.html">Contacto</a>
                 <a href="reservas.html">Reservas</a>
-        </nav>
+            </nav>
+            <button type="button" class="btn-tema" id="btn-tema">
+            ☀ Modo claro
+            </button> 
         </div>
+        
     </header>
+    <main class="container">
+        <section class="hero-eventos">
+            <h1>Eventos</h1>
+            <p>Música, sabores y buenos motivos para encontrarnos.</p>
+        </section>
 
-        <h1>
-            Eventos de La Jalisco
-        </h1>
+        <section class="destacados">
+            <h2>Lo que puede traer la noche</h2>
+            <div class="productos">
+                <article class="menu-item">
+                    <span>MÚSICA EN VIVO</span>
+                    <h3>Noches acústicas</h3>
+                    <p>Guitarras, voces íntimas y cócteles para acompañar una cena sin prisa.</p>
+                    <a href="#" class="btn-r">Consultar</a>
+                </article>
+
+                <article class="menu-item">
+                    <span>CELEBRACIONES</span>
+                    <h3>Una noche para brindar</h3>
+                    <p>Buena compañía y una ocasión especial que merece su propio momento.</p>
+                    <a href="#" class="btn-r">Consultar</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2026 La Jalisco. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/interacciones.js" defer></script>
     </body>
-    </html>
+</html>

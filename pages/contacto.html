@@ -1,31 +1,72 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Pagina web de La Jalisco, un local de comida con barra de bar">
+        <meta name="description" content="Formulario de contacto de La Jalisco.">
+        <meta name="author" content="Daiana Elizabeth Medina Martinez">        
         <title>Contacto o atencion al cliente</title>
-                
+        <link rel="icon" href="../img/logo-jalisco.png" type="image/x-icon">
         <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
+        <link rel="stylesheet" href="../css/style-pages.css">
+
+</head>
+<body>
         <header class="header">
         <div class="menu container">
+        <button type="button" class="btn-menu" id="btn-menu">
+        ☰
+        </button>
             <a href="../index.html">
                 <img src="../img/Index-logo.png" class="logo" alt="Logo de La Jalisco">
             </a>
-        <nav>
-                <a href="../index.html">Casa</a>
-                <a href="menu.html">Menú</a>
-                <a href="eventos.html">Eventos</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="reservas.html">Reservas</a>
-        </nav>
+            <nav class="navbar">
+                    <a href="../index.html">Casa</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="eventos.html">Eventos</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="reservas.html">Reservas</a>
+            </nav>
+            <button type="button" class="btn-tema" id="btn-tema">
+            ☀ Modo claro
+            </button> 
        </div> 
-    </header>
 
-        <h1>
-            Contacto/Atencion al cliente.
-        </h1>
-    </body>
-    </html>
+
+    </header>
+    <main class="container">
+        <h1>Contacto</h1>
+        <p>Una pregunta, una idea o una ocasión especial. La conversación empieza aquí.</p>
+
+        <section class="contacto-grid">
+            <form class="form-contacto">
+                <h2>Cuéntanos, te leemos.</h2>
+                
+                <label for="nombre">Nombre obligatorio</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+                <label for="correo">Correo electrónico obligatorio</label>
+                <input type="email" id="correo" placeholder="tu@correo.com" required>
+
+                <label for="mensaje">Mensaje obligatorio</label>
+                <textarea id="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+                <button type="submit" class="btn-r">Enviar mensaje →</button>
+            </form>
+
+            <div class="info-contacto">
+                <h3>Hablemos de tu próxima visita</h3>
+                <p><strong>TELÉFONO:</strong> 612 134 4035</p>
+                <p><strong>CORREO ELECTRÓNICO:</strong> contacto@lajalisco.com</p>
+                <p><strong>HORARIOS:</strong> Lunes a viernes de 17:00 a 24:00 | Sábados y domingos de :00 a 24:00</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 La Jalisco. Todos los derechos reservados.</p>
+    </footer>
+<script src="../js/interacciones.js" defer></script>
+</body>
+</html>
     
