@@ -43,16 +43,17 @@
                 <h2>Cuéntanos, te leemos.</h2>
                 
                 <label for="nombre">Nombre obligatorio</label>
-                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
                 <label for="correo">Correo electrónico obligatorio</label>
-                <input type="email" id="correo" placeholder="tu@correo.com" required>
+                <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
 
                 <label for="mensaje">Mensaje obligatorio</label>
-                <textarea id="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                <textarea id="mensaje" name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
 
                 <button type="submit" class="btn-r">Enviar mensaje →</button>
             </form>
+            <script type="module"src="../js/formulario.js" defer></script>
 
             <div class="info-contacto">
                 <h3>Hablemos de tu próxima visita</h3>
