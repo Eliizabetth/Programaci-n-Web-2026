@@ -1,0 +1,5 @@
+[
+    { "id": 1, "nombre": "Hamburguesa Barcinos", "precio": 210, "categoria": "hamburguesas", "imagen": "../img/Frame 1.png" },
+    { "id": 2, "nombre": "Alitas Mango y Fresa Chipotle", "precio": 140, "categoria": "alitas", "imagen": "../img/Frame 2.png" },
+    { "id": 3, "nombre": "Pina colada", "precio": 155, "categoria": "Bebidas" , "imagen": "../img/Frame 4.png" }
+]

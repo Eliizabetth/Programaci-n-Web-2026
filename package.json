@@ -1,0 +1,24 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "- **Nombre** Daiana Elizabeth Medina Martinez - **Edad** 19 años - **Carrera** Ingeniero en desarrollo de software - **Turno** Matutino - **Semestre** 5to semestre",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eliizabetth/Programaci-n-Web-2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Eliizabetth/Programaci-n-Web-2026/issues"
+  },
+  "homepage": "https://github.com/Eliizabetth/Programaci-n-Web-2026#readme",
+  "dependencies": {
+    "sweetalert2": "^11.26.25"
+  }
+}

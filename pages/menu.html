@@ -7,7 +7,7 @@
     <title>Menú de La Jalisco</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/style-pages.css">
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
           <header>
@@ -52,35 +52,18 @@
 
         <section class="destacados">
             <h2>Para comer</h2>
-            <div class="productos">
-                <article class="menu-item" data-categoria="hamburguesas">
-                    <img src="../img/Frame 1.png" alt="Hamburguesa Barcinos">
-                    <span>HAMBURGUESAS</span>
-                    <h3>Hamburguesa Barcinos</h3>
-                    <p>Doble carne de res premium, queso fundido, tocino crujiente y cebolla caramelizada.</p>
-                    <div class="card-footer">
-                        <strong>$210</strong>
-                        <button class="btn-add">+</button>
-                    </div>
-                </article>
 
-                <article class="menu-item" data-categoria="alitas">
-                    <img src="../img/Frame 2.png" alt="Alitas Mango y Fresa Chipotle">
-                    <span>ALITAS</span>
-                    <h3>Alitas Mango y Fresa Chipotle</h3>
-                    <p>Alitas crujientes bañadas en una exquisita y picante combinación de mango dulce y fresa.</p>
-                    <div class="card-footer">
-                        <strong>$140</strong>
-                        <button class="btn-add">+</button>
-                    </div>
-                </article>
-            </div>
+            <section id="contenedor-menu" class="productos">
+            
+            </section>
         </section>
     </main>
 
     <footer>
         <p>2026 La Jalisco. Todos los derechos reservados.</p>
     </footer>
-<script src="../js/interacciones.js" defer></script>
+
+    <script src="../js/interacciones.js" defer></script>
+    <script type="module" src="../js/main.js"></script>
 </body>    
 </html>
