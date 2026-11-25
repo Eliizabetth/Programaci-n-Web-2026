@@ -197,11 +197,45 @@
             </article>
         </section>
 
+        <section class="container destacados" aria-labelledby="titulo-resenas">
+            <h2 id="titulo-resenas">Reseñas de clientes</h2>
+
+            <p id="estado-resenas" role="status" aria-live="polite"></p>
+            <div id="lista-resenas" class="productos"></div>
+
+            <form id="form-resena" novalidate>
+                <h3>Deja tu reseña</h3>
+
+                <div class="campo">
+                    <label for="resena-cliente">Tu nombre</label>
+                    <input id="resena-cliente" name="cliente" type="text" required minlength="2" placeholder="Ej. Ana López">
+                </div>
+
+                <div class="campo">
+                    <label for="resena-platillo">Platillo o bebida</label>
+                    <input id="resena-platillo" name="platillo" type="text" required placeholder="Ej. Hamburguesa Barcinos">
+                </div>
+
+                <div class="campo">
+                    <label for="resena-calificacion">Calificación (1 a 5)</label>
+                    <input id="resena-calificacion" name="calificacion" type="number" min="1" max="5" required placeholder="5">
+                </div>
+
+                <div class="campo">
+                    <label for="resena-comentario">Comentario</label>
+                    <textarea id="resena-comentario" name="comentario" required minlength="4" placeholder="Cuéntanos qué te pareció..."></textarea>
+                </div>
+
+                <button type="submit">Enviar reseña</button>
+                <p id="mensaje-form-resena" role="status" aria-live="polite"></p>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>2026 La Jalisco. Todos los derechos reservados. <strong>v1.0.0</strong></p>
     </footer>
-<script src="js/interacciones.js" defer></script>
+    <script src="js/interacciones.js" defer></script>
+    <script type="module" src="js/resenas.js"></script>
 </body>
 </html>
